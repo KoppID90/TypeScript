@@ -1,0 +1,14 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const product_1 = require("./models/product");
+const inventoryService_1 = require("./services/inventoryService");
+const userService_1 = require("./services/userService");
+const inventory = new inventoryService_1.Inventory();
+const product1 = new product_1.Product('1', 'Laptop', 250000, 'Kiváló laptop');
+const product2 = new product_1.Product('2', 'IPhone', 180000);
+inventory.addProduct(product1);
+inventory.addProduct(product2);
+console.log(inventory);
+const userService = new userService_1.UserService();
+const user = userService.createUser('1', 'Kiss János', 'kiss.janchii@gmail.com');
+console.log(userService);
